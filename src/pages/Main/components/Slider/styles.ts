@@ -137,6 +137,26 @@ const SliderComponent = styled.div`
       }
 
       .switcher {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        div {
+          width: 15px;
+          height: 15px;
+          background-color: ${styleVars.fontColorWhiteFade};
+          border-radius: 50%;
+          margin-right: 10px;
+          cursor: pointer;
+
+          &.active {
+            width: 30px;
+            border-radius: 15px;
+            background-color: ${styleVars.orange};
+          }
+        }
       }
     }
   }

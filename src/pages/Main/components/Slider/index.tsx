@@ -13,7 +13,8 @@ interface IProps {
 
 const Slider: React.FC<IProps> = ({ arr }) => {
   const sliderContainerRef = useRef<HTMLDivElement>(null);
-  const [currentSliderElInd, setCurrentSliderElInd] = useState(1);
+  const switcherContainerRef = useRef<HTMLDivElement>(null);
+  const [currentSliderElInd, setCurrentSliderElInd] = useState(0);
 
   const sliderElClickHandler = (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>
@@ -36,6 +37,11 @@ const Slider: React.FC<IProps> = ({ arr }) => {
     setCurrentSliderElInd((prev) => (isTurnForward ? prev + 1 : prev - 1));
   };
 
+  const switcherClickHandler = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    const swithcerElId = parseInt(e.currentTarget.id.slice(-1));
+    setCurrentSliderElInd(swithcerElId);
+  }
+
   useEffect(() => {
     if (!sliderContainerRef.current) return;
     const el = sliderContainerRef.current;
@@ -43,6 +49,7 @@ const Slider: React.FC<IProps> = ({ arr }) => {
     children[currentSliderElInd].scrollIntoView({
       behavior: "smooth",
       inline: "center",
+      block: "nearest",
     });
   }, [currentSliderElInd]);
 
@@ -74,8 +81,8 @@ const Slider: React.FC<IProps> = ({ arr }) => {
               </div>
             ))}
           </div>
-          <div className="switcher">
-            
+          <div className="switcher" ref={switcherContainerRef}>
+            {arr.map((el,ind)=><div onClick={switcherClickHandler} id={`img${ind}`} className={ind === currentSliderElInd ? "active" : ""} key={ind} />)}
           </div>
         </div>
       </div>
