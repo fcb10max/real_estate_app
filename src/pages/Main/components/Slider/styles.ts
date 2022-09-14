@@ -3,7 +3,7 @@ import styleVars from "../../../../styleVars";
 
 const SliderComponent = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,17 +31,18 @@ const SliderComponent = styled.div`
 
     & > div {
       width: 100%;
-      height: fit-content;
+      height: 100%;
       overflow: hidden;
       position: relative;
 
       span.left {
         content: "<";
         width: 50px;
-        height: 100%;
+        height: 50%;
         position: absolute;
         left: 0;
-        top: 0;
+        top: 50%;
+        transform: translate(0, -50%);
         background-color: #00000066;
         color: ${styleVars.fontColorWhiteFade};
         font-size: 50px;
@@ -54,10 +55,11 @@ const SliderComponent = styled.div`
       span.right {
         content: ">";
         width: 50px;
-        height: 100%;
+        height: 50%;
         position: absolute;
         right: 0;
-        top: 0;
+        top: 50%;
+        transform: translate(0, -50%);
         background-color: #00000066;
         color: ${styleVars.fontColorWhiteFade};
         font-size: 50px;
