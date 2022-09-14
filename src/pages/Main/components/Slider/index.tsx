@@ -14,13 +14,15 @@ interface IProps {
 const Slider: React.FC<IProps> = ({ arr }) => {
   const sliderContainerRef = useRef<HTMLDivElement>(null);
   const switcherContainerRef = useRef<HTMLDivElement>(null);
-  const [currentSliderElInd, setCurrentSliderElInd] = useState(0);
+  const [currentSliderElIdx, setCurrentSliderElIdx] = useState(0);
+  const [isInitialRender, setIsInitialRender] = useState(true);
 
   const sliderElClickHandler = (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
     const el = e.currentTarget;
-    setCurrentSliderElInd(parseInt(el.id));
+    setCurrentSliderElIdx(parseInt(el.id));
+    if (isInitialRender) setIsInitialRender(false);
   };
 
   const sliderMoveButtonClickHandler = (
@@ -30,28 +32,32 @@ const Slider: React.FC<IProps> = ({ arr }) => {
     const el = sliderContainerRef.current;
     const children: Element[] = Array.from(el.children);
     const isTurnForward = e.currentTarget.innerText === ">" ? true : false;
-    if (currentSliderElInd === 0 && !isTurnForward)
-      return setCurrentSliderElInd(children.length - 1);
-    if (currentSliderElInd + 1 === children.length && isTurnForward)
-      return setCurrentSliderElInd(0);
-    setCurrentSliderElInd((prev) => (isTurnForward ? prev + 1 : prev - 1));
+    if (isInitialRender) setIsInitialRender(false);
+    if (currentSliderElIdx === 0 && !isTurnForward)
+      return setCurrentSliderElIdx(children.length - 1);
+    if (currentSliderElIdx + 1 === children.length && isTurnForward)
+      return setCurrentSliderElIdx(0);
+    setCurrentSliderElIdx((prev) => (isTurnForward ? prev + 1 : prev - 1));
   };
 
-  const switcherClickHandler = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+  const switcherClickHandler = (
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
     const swithcerElId = parseInt(e.currentTarget.id.slice(-1));
-    setCurrentSliderElInd(swithcerElId);
-  }
+    setCurrentSliderElIdx(swithcerElId);
+    if (isInitialRender) setIsInitialRender(false);
+  };
 
   useEffect(() => {
-    if (!sliderContainerRef.current) return;
+    if (!sliderContainerRef.current || isInitialRender) return;
     const el = sliderContainerRef.current;
     const children: Element[] = Array.from(el.children);
-    children[currentSliderElInd].scrollIntoView({
+    children[currentSliderElIdx].scrollIntoView({
       behavior: "smooth",
       inline: "center",
       block: "nearest",
     });
-  }, [currentSliderElInd]);
+  }, [currentSliderElIdx, isInitialRender]);
 
   return (
     <SliderComponent>
@@ -70,7 +76,7 @@ const Slider: React.FC<IProps> = ({ arr }) => {
               <div
                 key={ind}
                 id={`${ind}`}
-                className={ind === currentSliderElInd ? "active" : ""}
+                className={ind === currentSliderElIdx ? "active" : ""}
                 onClick={sliderElClickHandler}
               >
                 <img src={item.image} alt="home" />
@@ -82,7 +88,14 @@ const Slider: React.FC<IProps> = ({ arr }) => {
             ))}
           </div>
           <div className="switcher" ref={switcherContainerRef}>
-            {arr.map((el,ind)=><div onClick={switcherClickHandler} id={`img${ind}`} className={ind === currentSliderElInd ? "active" : ""} key={ind} />)}
+            {arr.map((el, ind) => (
+              <div
+                onClick={switcherClickHandler}
+                id={`img${ind}`}
+                className={ind === currentSliderElIdx ? "active" : ""}
+                key={ind}
+              />
+            ))}
           </div>
         </div>
       </div>
