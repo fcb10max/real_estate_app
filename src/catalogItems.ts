@@ -11,7 +11,7 @@ import homeImg9 from "./assets/images/png/homeImg9.jpg";
 
 // room images
 import roomImg1L from "./assets/images/png/room1L.jpg";
-import roomImg1S from "./assets/images/png/room1S.jpg";
+import roomImg1S from "./assets/images/png/room1s.jpg";
 import roomImg2L from "./assets/images/png/room2L.jpg";
 import roomImg2S from "./assets/images/png/room2S.jpg";
 import roomImg3L from "./assets/images/png/room3L.jpg";
