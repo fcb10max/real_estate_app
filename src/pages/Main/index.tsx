@@ -5,13 +5,14 @@ import PageTop from "./components/PageTop";
 import Slider from "./components/Slider";
 import { MainPage } from "./styles";
 import sliderArr from "../../sliderObj";
+import Catalog from "./components/Catalog";
 
 const Main: React.FC = () => {
 
   return (
     <MainPage>
       <PageTop />
-      {/* there will be items component */}
+      <Catalog />
       {/* there will be map component */}
       <About />
       <Slider arr={sliderArr} />
