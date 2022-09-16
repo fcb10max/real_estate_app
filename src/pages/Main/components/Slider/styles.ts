@@ -72,6 +72,7 @@ const SliderComponent = styled.div`
 
       .slider__wrapper__items {
         width: 100%;
+        min-height: 590px;
         height: 100%;
         display: flex;
         align-items: center;
@@ -150,6 +151,11 @@ const SliderComponent = styled.div`
           border-radius: 50%;
           margin-right: 10px;
           cursor: pointer;
+          transition: width 0.3s linear, background-color 0.3s linear;
+
+          :hover {
+            background-color: ${styleVars.fontColorWhite};
+          }
 
           &.active {
             width: 30px;

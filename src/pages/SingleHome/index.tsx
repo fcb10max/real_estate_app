@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import { useParams } from "react-router-dom";
+import catalgoItems from "../../catalogItems";
 
 function SingleHome() {
-  return (
-    <div>SingleHome</div>
-  )
+  const { id } = useParams();
+  console.log(catalgoItems[id ? parseInt(id) : 0]);
+
+  return <div>SingleHome</div>;
 }
 
-export default SingleHome
+export default SingleHome;

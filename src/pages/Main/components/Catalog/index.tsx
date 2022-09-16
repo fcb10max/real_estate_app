@@ -1,17 +1,27 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import CatalogComponent from "./styles";
-import data from "../../../../catalogItems";
+import data, { IObj } from "../../../../catalogItems";
+import { Link } from "react-router-dom";
 import filterIcon from "../../../../assets/images/svg/filter.svg";
+import bathroomIcon from "../../../../assets/images/svg/bathroomIcon.svg";
+import bedroomIcon from "../../../../assets/images/svg/bedroomIcon.svg";
+import loadMore from "../../../../assets/images/svg/loadMore.svg";
 
 const Catalog = () => {
   const [isFilterActive, setIsFilterActive] = useState(false);
   const [catalogItems, setCatalogItems] = useState(data.slice(0, 6));
+  const [isAllDataFetched, setIsAllDataFetched] = useState(false);
 
   const [houseTypes, setHouseTypes] = useState<string[]>([]);
   useEffect(() => {
     const types = Array.from(new Set(data.map((i) => i.houseType)));
     setHouseTypes(types);
   }, []);
+
+  const loadMoreHandler = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    setCatalogItems(data);
+    setIsAllDataFetched(true);
+  };
 
   return (
     <CatalogComponent>
@@ -59,22 +69,94 @@ const Catalog = () => {
         </div>
         <div className="catalog__wrapper__items">
           {catalogItems.map((item, idx) => (
-            <div key={idx} className="catalog__wrapper__items__item">
-              <div className="catalog__wrapper__items__item__imgs">
-                {item.homeImgs.map((image, idx) => (
-                  <img key={idx} src={image} alt="home" />
-                ))}
-              </div>
-              <div className="catalog__wrapper__items__item__info">
-                <div className="catalog__wrapper__items__item__info__top"></div>
-                <div className="catalog__wrapper__items__item__info__botom"></div>
-              </div>
-            </div>
+            <Item item={item} key={idx} homeIdx={idx} />
           ))}
         </div>
-        <div className="catalog__wrapper__loadMore"></div>
+        {!isAllDataFetched && (
+          <div className="catalog__wrapper__loadMore" onClick={loadMoreHandler}>
+            <i>
+              <img src={loadMore} alt="load_more" />
+            </i>
+            <p>View More</p>
+          </div>
+        )}
       </div>
     </CatalogComponent>
+  );
+};
+
+const Item = ({ item, homeIdx }: { item: IObj; homeIdx: number }) => {
+  const imagesContainerRef = useRef<HTMLDivElement>(null);
+
+  const handleImageArrowClick = (
+    e: React.MouseEvent<HTMLSpanElement, MouseEvent>
+  ) => {
+    if (!imagesContainerRef.current) return;
+    const imgsContainer = imagesContainerRef.current;
+    const imgContainerOffsetWidth = imgsContainer.offsetWidth;
+    const isForward = e.currentTarget.innerText === ">" ? true : false;
+    if (isForward) {
+      imgsContainer.scrollBy({
+        left: imgContainerOffsetWidth,
+        behavior: "smooth",
+      });
+    } else {
+      imgsContainer.scrollBy({
+        left: -imgContainerOffsetWidth,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  return (
+    <div className="catalog__wrapper__items__item">
+      <div className="catalog__wrapper__items__item__imgs">
+        <span className="left" onClick={handleImageArrowClick}>
+          {"<"}
+        </span>
+        <span className="right" onClick={handleImageArrowClick}>
+          {">"}
+        </span>
+        <div ref={imagesContainerRef}>
+          {item.homeImgs.map((img, idx) => (
+            <section key={idx}>
+              <img src={img} alt="house" />
+            </section>
+          ))}
+        </div>
+      </div>
+      <div className="catalog__wrapper__items__item__info">
+        <div className="catalog__wrapper__items__item__info__top">
+          <p className="price">{item.price} $</p>
+          <Link to={`/home/${homeIdx}`}>View Details</Link>
+        </div>
+        <div className="catalog__wrapper__items__item__info__bottom">
+          <span>
+            <i>
+              <img src={bedroomIcon} alt="bedroom" />
+            </i>
+            <p>
+              {item.rooms.bedrooms > 1
+                ? `${item.rooms.bedrooms} bedrooms`
+                : `${item.rooms.bedrooms} bedroom`}
+            </p>
+          </span>
+          <span>
+            <i>
+              <img src={bathroomIcon} alt="bathroom" />
+            </i>
+            <p>
+              {item.rooms.bathrooms > 1
+                ? `${item.rooms.bathrooms} bathrooms`
+                : `${item.rooms.bathrooms} bathroom`}
+            </p>
+          </span>
+          <span>
+            <p>{item.area} sq ft</p>
+          </span>
+        </div>
+      </div>
+    </div>
   );
 };
 
