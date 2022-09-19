@@ -1,7 +1,7 @@
 import React from 'react'
 import PageTopComponent from './styles'
 
-const PageTop = () => {
+const PageTop: React.FC = () => {
   return (
     <PageTopComponent>
     <div className="pageTop__wrapper">

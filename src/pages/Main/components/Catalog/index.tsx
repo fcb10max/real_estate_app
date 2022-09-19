@@ -1,25 +1,91 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import CatalogComponent from "./styles";
 import data, { IObj } from "../../../../catalogItems";
-import { Link } from "react-router-dom";
 import filterIcon from "../../../../assets/images/svg/filter.svg";
-import bathroomIcon from "../../../../assets/images/svg/bathroomIcon.svg";
-import bedroomIcon from "../../../../assets/images/svg/bedroomIcon.svg";
 import loadMore from "../../../../assets/images/svg/loadMore.svg";
+import Filter from "./subcomponents/Filter";
+import Item from "./subcomponents/Item";
 
-const Catalog = () => {
+enum featuresEnum {
+  elevator = "elevator",
+  laundry = "laundry facilities",
+  closet = "walk in closet",
+  fireplace = "fireplace",
+  balcony = "balcony",
+  garden = "garden",
+}
+interface IFilter {
+  price: {
+    startValue: number;
+    endValue: number;
+  };
+  bedrooms: {
+    startValue: number;
+    endValue: number;
+  };
+  area: {
+    startValue: number;
+    endValue: number;
+  };
+  features?: featuresEnum[];
+}
+
+const Catalog: React.FC = () => {
   const [isFilterActive, setIsFilterActive] = useState(false);
-  const [catalogItems, setCatalogItems] = useState(data.slice(0, 6));
+  const [catalogItems, setCatalogItems] = useState(data);
+  const [renderItems, setRenderItems] = useState(catalogItems.slice(0, 6));
   const [isAllDataFetched, setIsAllDataFetched] = useState(false);
+  const [filterSettings, setFilterSettings] = useState<IFilter>();
 
-  const [houseTypes, setHouseTypes] = useState<string[]>([]);
   useEffect(() => {
-    const types = Array.from(new Set(data.map((i) => i.houseType)));
-    setHouseTypes(types);
-  }, []);
+    let filteredData: IObj[] = data;
+    if (filterSettings?.area) {
+      filteredData = filteredData.filter(
+        (el) =>
+          el.area >= filterSettings.area.startValue &&
+          el.area <= filterSettings.area.endValue
+      );
+    }
+    if (filterSettings?.price) {
+      filteredData = filteredData.filter(
+        (el) =>
+          el.price >= filterSettings.price.startValue &&
+          el.price <= filterSettings.price.endValue
+      );
+    }
+    if (filterSettings?.bedrooms) {
+      filteredData = filteredData.filter(
+        (el) =>
+          el.rooms.bedrooms >= filterSettings.bedrooms.startValue &&
+          el.rooms.bedrooms <= filterSettings.bedrooms.endValue
+      );
+    }
+    if (filterSettings?.features && filterSettings.features.length > 0) {
+      filteredData = filteredData.filter((el) => {
+        const vals = el.features!.map((i) => i.name);
+        for (let i = 0; i < filterSettings.features!.length; i++) {
+          if (!vals?.includes(filterSettings.features![i])) return false;
+        }
+        return true;
+      });
+    }
+    if (filteredData.length < 6) {
+      setIsAllDataFetched(true);
+      setCatalogItems(filteredData);
+      setRenderItems(filteredData);
+      return;
+    }
+    setCatalogItems(filteredData);
+    setRenderItems(filteredData.slice(0, 6));
+    setIsAllDataFetched(false);
+  }, [filterSettings]);
 
   const loadMoreHandler = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    setCatalogItems(data);
+    if (catalogItems.length > renderItems.length+6) {
+      setRenderItems(catalogItems.slice(0, renderItems.length+6));
+      return
+    }
+    setRenderItems(catalogItems);
     setIsAllDataFetched(true);
   };
 
@@ -35,29 +101,11 @@ const Catalog = () => {
             className="filterModalWindow__container__close"
             onClick={() => setIsFilterActive(false)}
           />
-          <div className="filterModalWindow__container__byTypes"></div>
-          <div className="filterModalWindow__container__byPrice"></div>
-          <div className="filterModalWindow__container__byRooms"></div>
-          <div className="filterModalWindow__container__byArea"></div>
-          <div className="filterModalWindow__container__byFeatures"></div>
+          <Filter setFilterSettings={setFilterSettings} setIsFilterActive={setIsFilterActive} />
         </div>
       </div>
       <div className="catalog__wrapper">
         <div className="catalog__wrapper__sortAndFilterBlock">
-          <div className="catalog__wrapper__sortAndFilterBlock__types">
-            {houseTypes.map((item, idx) => (
-              <div key={idx}>
-                <input
-                  type={"radio"}
-                  name="houseTypes"
-                  value={item}
-                  id={`type${idx}`}
-                  defaultChecked={idx === 0 ? true : false}
-                />
-                <label htmlFor={`type${idx}`}>{item}</label>
-              </div>
-            ))}
-          </div>
           <div className="catalog__wrapper__sortAndFilterBlock__filter">
             <button onClick={() => setIsFilterActive(true)}>
               <p>Filter</p>
@@ -68,9 +116,14 @@ const Catalog = () => {
           </div>
         </div>
         <div className="catalog__wrapper__items">
-          {catalogItems.map((item, idx) => (
-            <Item item={item} key={idx} homeIdx={idx} />
-          ))}
+          {renderItems && !renderItems.length && (
+            <div style={{ color: "white" }}>No items found</div>
+          )}
+          {renderItems &&
+            renderItems.length > 0 &&
+            renderItems.map((item, idx) => (
+              <Item item={item} key={idx} homeIdx={idx} />
+            ))}
         </div>
         {!isAllDataFetched && (
           <div className="catalog__wrapper__loadMore" onClick={loadMoreHandler}>
@@ -82,81 +135,6 @@ const Catalog = () => {
         )}
       </div>
     </CatalogComponent>
-  );
-};
-
-const Item = ({ item, homeIdx }: { item: IObj; homeIdx: number }) => {
-  const imagesContainerRef = useRef<HTMLDivElement>(null);
-
-  const handleImageArrowClick = (
-    e: React.MouseEvent<HTMLSpanElement, MouseEvent>
-  ) => {
-    if (!imagesContainerRef.current) return;
-    const imgsContainer = imagesContainerRef.current;
-    const imgContainerOffsetWidth = imgsContainer.offsetWidth;
-    const isForward = e.currentTarget.innerText === ">" ? true : false;
-    if (isForward) {
-      imgsContainer.scrollBy({
-        left: imgContainerOffsetWidth,
-        behavior: "smooth",
-      });
-    } else {
-      imgsContainer.scrollBy({
-        left: -imgContainerOffsetWidth,
-        behavior: "smooth",
-      });
-    }
-  };
-
-  return (
-    <div className="catalog__wrapper__items__item">
-      <div className="catalog__wrapper__items__item__imgs">
-        <span className="left" onClick={handleImageArrowClick}>
-          {"<"}
-        </span>
-        <span className="right" onClick={handleImageArrowClick}>
-          {">"}
-        </span>
-        <div ref={imagesContainerRef}>
-          {item.homeImgs.map((img, idx) => (
-            <section key={idx}>
-              <img src={img} alt="house" />
-            </section>
-          ))}
-        </div>
-      </div>
-      <div className="catalog__wrapper__items__item__info">
-        <div className="catalog__wrapper__items__item__info__top">
-          <p className="price">{item.price} $</p>
-          <Link to={`/home/${homeIdx}`}>View Details</Link>
-        </div>
-        <div className="catalog__wrapper__items__item__info__bottom">
-          <span>
-            <i>
-              <img src={bedroomIcon} alt="bedroom" />
-            </i>
-            <p>
-              {item.rooms.bedrooms > 1
-                ? `${item.rooms.bedrooms} bedrooms`
-                : `${item.rooms.bedrooms} bedroom`}
-            </p>
-          </span>
-          <span>
-            <i>
-              <img src={bathroomIcon} alt="bathroom" />
-            </i>
-            <p>
-              {item.rooms.bathrooms > 1
-                ? `${item.rooms.bathrooms} bathrooms`
-                : `${item.rooms.bathrooms} bathroom`}
-            </p>
-          </span>
-          <span>
-            <p>{item.area} sq ft</p>
-          </span>
-        </div>
-      </div>
-    </div>
   );
 };
 

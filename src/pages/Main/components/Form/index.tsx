@@ -4,7 +4,7 @@ import FormComponent from "./styles";
 import styleVars from "../../../../styleVars";
 import { IFormData, InterestedIn } from "../../../../inpuDataTypes";
 
-const Form = () => {
+const Form: React.FC = () => {
   const [data, setData] = useState<IFormData>({
     name: "",
     email: "",

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import AboutComponent from "./styles";
 
-const About = () => {
+const About: React.FC = () => {
   return (
     <AboutComponent>
       <div className="about__wrapper">

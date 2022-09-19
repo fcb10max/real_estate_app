@@ -33,7 +33,6 @@ import garden from "./assets/images/svg/gardenIcon.svg";
 import laundry from "./assets/images/svg/laundryServiceIocn.svg";
 
 export interface IObj {
-  houseType: string;
   homeImgs: string[];
   price: number;
   area: number;
@@ -53,7 +52,6 @@ export interface IObj {
 
 const arr: IObj[] = [
   {
-    houseType: "studio",
     homeImgs: [
       homeImg1,
       homeImg2,
@@ -100,14 +98,6 @@ const arr: IObj[] = [
     ],
     features: [
       {
-        name: "elevator",
-        img: elevator,
-      },
-      {
-        name: "laundry facilities",
-        img: laundry,
-      },
-      {
         name: "walk in closet",
         img: closet,
       },
@@ -116,17 +106,12 @@ const arr: IObj[] = [
         img: firePlace,
       },
       {
-        name: "balcony",
-        img: balcony,
-      },
-      {
         name: "garden",
         img: garden,
       },
     ],
   },
   {
-    houseType: "2 bedrooms",
     homeImgs: [
       homeImg2,
       homeImg1,
@@ -181,25 +166,12 @@ const arr: IObj[] = [
         img: laundry,
       },
       {
-        name: "walk in closet",
-        img: closet,
-      },
-      {
-        name: "fireplace",
-        img: firePlace,
-      },
-      {
         name: "balcony",
         img: balcony,
-      },
-      {
-        name: "garden",
-        img: garden,
       },
     ],
   },
   {
-    houseType: "1 bedroom",
     homeImgs: [
       homeImg3,
       homeImg1,
@@ -214,7 +186,7 @@ const arr: IObj[] = [
     price: 143000,
     area: 535,
     rooms: {
-      bedrooms: 1,
+      bedrooms: 3,
       bathrooms: 1,
     },
     roomImgs: [
@@ -261,18 +233,9 @@ const arr: IObj[] = [
         name: "fireplace",
         img: firePlace,
       },
-      {
-        name: "balcony",
-        img: balcony,
-      },
-      {
-        name: "garden",
-        img: garden,
-      },
     ],
   },
   {
-    houseType: "1 bedroom",
     homeImgs: [
       homeImg4,
       homeImg1,
@@ -287,7 +250,7 @@ const arr: IObj[] = [
     price: 211200,
     area: 535,
     rooms: {
-      bedrooms: 1,
+      bedrooms: 4,
       bathrooms: 1,
     },
     roomImgs: [
@@ -319,24 +282,12 @@ const arr: IObj[] = [
     ],
     features: [
       {
-        name: "elevator",
-        img: elevator,
-      },
-      {
         name: "laundry facilities",
         img: laundry,
       },
       {
-        name: "walk in closet",
-        img: closet,
-      },
-      {
         name: "fireplace",
         img: firePlace,
-      },
-      {
-        name: "balcony",
-        img: balcony,
       },
       {
         name: "garden",
@@ -345,7 +296,6 @@ const arr: IObj[] = [
     ],
   },
   {
-    houseType: "1 bedroom",
     homeImgs: [
       homeImg5,
       homeImg1,
@@ -396,12 +346,124 @@ const arr: IObj[] = [
         img: elevator,
       },
       {
-        name: "laundry facilities",
-        img: laundry,
-      },
-      {
         name: "walk in closet",
         img: closet,
+      },
+      {
+        name: "balcony",
+        img: balcony,
+      },
+    ],
+  },
+  {
+    homeImgs: [
+      homeImg6,
+      homeImg1,
+      homeImg2,
+      homeImg3,
+      homeImg4,
+      homeImg5,
+      homeImg7,
+      homeImg8,
+      homeImg9,
+    ],
+    price: 190400,
+    area: 535,
+    rooms: {
+      bedrooms: 2,
+      bathrooms: 1,
+    },
+    roomImgs: [
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+    ],
+    features: [
+      {
+        name: "fireplace",
+        img: firePlace,
+      },
+      {
+        name: "balcony",
+        img: balcony,
+      },
+      {
+        name: "garden",
+        img: garden,
+      },
+    ],
+  },
+  {
+    homeImgs: [
+      homeImg7,
+      homeImg1,
+      homeImg2,
+      homeImg3,
+      homeImg4,
+      homeImg5,
+      homeImg6,
+      homeImg8,
+      homeImg9,
+    ],
+    price: 190400,
+    area: 535,
+    rooms: {
+      bedrooms: 3,
+      bathrooms: 1,
+    },
+    roomImgs: [
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+    ],
+    features: [
+      {
+        name: "elevator",
+        img: elevator,
       },
       {
         name: "fireplace",
@@ -418,17 +480,76 @@ const arr: IObj[] = [
     ],
   },
   {
-    houseType: "2 bedrooms",
     homeImgs: [
-      homeImg6,
+      homeImg8,
       homeImg1,
       homeImg2,
       homeImg3,
       homeImg4,
       homeImg5,
+      homeImg6,
+      homeImg7,
+      homeImg9,
+    ],
+    price: 190400,
+    area: 535,
+    rooms: {
+      bedrooms: 4,
+      bathrooms: 1,
+    },
+    roomImgs: [
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+    ],
+    features: [
+      {
+        name: "laundry facilities",
+        img: laundry,
+      },
+      {
+        name: "walk in closet",
+        img: closet,
+      },
+      {
+        name: "fireplace",
+        img: firePlace,
+      },
+    ],
+  },
+  {
+    homeImgs: [
+      homeImg9,
+      homeImg1,
+      homeImg2,
+      homeImg3,
+      homeImg4,
+      homeImg5,
+      homeImg6,
       homeImg7,
       homeImg8,
-      homeImg9,
     ],
     price: 190400,
     area: 535,
@@ -491,22 +612,141 @@ const arr: IObj[] = [
     ],
   },
   {
-    houseType: "2 bedrooms",
     homeImgs: [
-      homeImg7,
       homeImg1,
       homeImg2,
       homeImg3,
       homeImg4,
       homeImg5,
       homeImg6,
+      homeImg7,
       homeImg8,
       homeImg9,
     ],
-    price: 190400,
+    price: 100000,
     area: 535,
     rooms: {
+      bedrooms: 1,
+      bathrooms: 1,
+    },
+    roomImgs: [
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+    ],
+    features: [
+      {
+        name: "walk in closet",
+        img: closet,
+      },
+      {
+        name: "fireplace",
+        img: firePlace,
+      },
+      {
+        name: "garden",
+        img: garden,
+      },
+    ],
+  },
+  {
+    homeImgs: [
+      homeImg2,
+      homeImg1,
+      homeImg3,
+      homeImg4,
+      homeImg5,
+      homeImg6,
+      homeImg7,
+      homeImg8,
+      homeImg9,
+    ],
+    price: 390000,
+    area: 1000,
+    rooms: {
       bedrooms: 2,
+      bathrooms: 3,
+    },
+    roomImgs: [
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+    ],
+    features: [
+      {
+        name: "elevator",
+        img: elevator,
+      },
+      {
+        name: "laundry facilities",
+        img: laundry,
+      },
+      {
+        name: "balcony",
+        img: balcony,
+      },
+    ],
+  },
+  {
+    homeImgs: [
+      homeImg3,
+      homeImg1,
+      homeImg2,
+      homeImg4,
+      homeImg5,
+      homeImg6,
+      homeImg7,
+      homeImg8,
+      homeImg9,
+    ],
+    price: 143000,
+    area: 535,
+    rooms: {
+      bedrooms: 3,
       bathrooms: 1,
     },
     roomImgs: [
@@ -553,9 +793,61 @@ const arr: IObj[] = [
         name: "fireplace",
         img: firePlace,
       },
+    ],
+  },
+  {
+    homeImgs: [
+      homeImg4,
+      homeImg1,
+      homeImg2,
+      homeImg3,
+      homeImg5,
+      homeImg6,
+      homeImg7,
+      homeImg8,
+      homeImg9,
+    ],
+    price: 211200,
+    area: 535,
+    rooms: {
+      bedrooms: 4,
+      bathrooms: 1,
+    },
+    roomImgs: [
       {
-        name: "balcony",
-        img: balcony,
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+    ],
+    features: [
+      {
+        name: "laundry facilities",
+        img: laundry,
+      },
+      {
+        name: "fireplace",
+        img: firePlace,
       },
       {
         name: "garden",
@@ -564,16 +856,75 @@ const arr: IObj[] = [
     ],
   },
   {
-    houseType: "2 bedrooms",
     homeImgs: [
+      homeImg5,
+      homeImg1,
+      homeImg2,
+      homeImg3,
+      homeImg4,
+      homeImg6,
+      homeImg7,
       homeImg8,
+      homeImg9,
+    ],
+    price: 132000,
+    area: 535,
+    rooms: {
+      bedrooms: 1,
+      bathrooms: 1,
+    },
+    roomImgs: [
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+    ],
+    features: [
+      {
+        name: "elevator",
+        img: elevator,
+      },
+      {
+        name: "walk in closet",
+        img: closet,
+      },
+      {
+        name: "balcony",
+        img: balcony,
+      },
+    ],
+  },
+  {
+    homeImgs: [
+      homeImg6,
       homeImg1,
       homeImg2,
       homeImg3,
       homeImg4,
       homeImg5,
-      homeImg6,
       homeImg7,
+      homeImg8,
       homeImg9,
     ],
     price: 190400,
@@ -611,16 +962,68 @@ const arr: IObj[] = [
     ],
     features: [
       {
+        name: "fireplace",
+        img: firePlace,
+      },
+      {
+        name: "balcony",
+        img: balcony,
+      },
+      {
+        name: "garden",
+        img: garden,
+      },
+    ],
+  },
+  {
+    homeImgs: [
+      homeImg7,
+      homeImg1,
+      homeImg2,
+      homeImg3,
+      homeImg4,
+      homeImg5,
+      homeImg6,
+      homeImg8,
+      homeImg9,
+    ],
+    price: 190400,
+    area: 535,
+    rooms: {
+      bedrooms: 3,
+      bathrooms: 1,
+    },
+    roomImgs: [
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+    ],
+    features: [
+      {
         name: "elevator",
         img: elevator,
-      },
-      {
-        name: "laundry facilities",
-        img: laundry,
-      },
-      {
-        name: "walk in closet",
-        img: closet,
       },
       {
         name: "fireplace",
@@ -637,7 +1040,66 @@ const arr: IObj[] = [
     ],
   },
   {
-    houseType: "2 bedrooms",
+    homeImgs: [
+      homeImg8,
+      homeImg1,
+      homeImg2,
+      homeImg3,
+      homeImg4,
+      homeImg5,
+      homeImg6,
+      homeImg7,
+      homeImg9,
+    ],
+    price: 190400,
+    area: 535,
+    rooms: {
+      bedrooms: 4,
+      bathrooms: 1,
+    },
+    roomImgs: [
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+    ],
+    features: [
+      {
+        name: "laundry facilities",
+        img: laundry,
+      },
+      {
+        name: "walk in closet",
+        img: closet,
+      },
+      {
+        name: "fireplace",
+        img: firePlace,
+      },
+    ],
+  },
+  {
     homeImgs: [
       homeImg9,
       homeImg1,

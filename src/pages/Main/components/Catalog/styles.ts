@@ -14,6 +14,7 @@ const CatalogComponent = styled.div`
 
     .catalog__wrapper__sortAndFilterBlock {
       display: flex;
+      justify-content: end;
       align-items: center;
 
       .catalog__wrapper__sortAndFilterBlock__types {
@@ -240,7 +241,7 @@ const CatalogComponent = styled.div`
         font-size: ${styleVars.fontSizeExtraSmall};
         color: ${styleVars.fontColorWhite};
       }
-    } 
+    }
   }
 
   .filterModalWindow {
@@ -260,10 +261,20 @@ const CatalogComponent = styled.div`
     }
 
     .filterModalWindow__container {
-      width: 500px;
-      height: 500px;
       background-color: #fff;
       position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h3 {
+        margin: 10px 0;
+        font-family: ${styleVars.mainFont};
+        font-size: ${styleVars.fontSizeSmall};
+        font-weight: 600;
+        color: ${styleVars.fontColorDark};
+      }
 
       .filterModalWindow__container__close {
         width: 40px;
@@ -284,6 +295,62 @@ const CatalogComponent = styled.div`
           width: 40px;
           background-color: #000;
           transform: rotate(90deg);
+        }
+      }
+
+      .filterModalWindow__container__byPrice,
+      .filterModalWindow__container__byRooms,
+      .filterModalWindow__container__byArea,
+      .filterModalWindow__container__byFeatures {
+        width: 90%;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: column;
+
+        div {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: start;
+
+          input {
+            display: none;
+          }
+
+          input + label {
+            padding: 12px 24px;
+            margin: 0 10px 10px 0;
+            border: 2px solid ${styleVars.fontColorDark};
+            border-radius: 8px;
+            transition: border-color 0.3s linear;
+            cursor: pointer;
+            font-family: ${styleVars.mainFont};
+            font-size: ${styleVars.fontSizeExtraSmall};
+            font-weight: 600;
+            color: ${styleVars.fontColorDark};
+          }
+
+          input:checked + label {
+            border-color: ${styleVars.orange};
+          }
+        }
+      }
+
+      button {
+        padding: 12px 24px;
+        background-color: ${styleVars.fontColorDark};
+        border: none;
+        border-radius: 8px;
+        font-family: ${styleVars.mainFont};
+        font-size: ${styleVars.fontSizeExtraSmall};
+        font-weight: 600;
+        color: ${styleVars.fontColorWhite};
+        margin: 20px;
+        cursor: pointer;
+        transition: color 0.3s linear;
+
+        :hover {
+          color: ${styleVars.fontColorWhiteFade};
         }
       }
     }
