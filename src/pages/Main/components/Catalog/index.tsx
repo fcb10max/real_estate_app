@@ -81,9 +81,9 @@ const Catalog: React.FC = () => {
   }, [filterSettings]);
 
   const loadMoreHandler = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    if (catalogItems.length > renderItems.length+6) {
-      setRenderItems(catalogItems.slice(0, renderItems.length+6));
-      return
+    if (catalogItems.length > renderItems.length + 6) {
+      setRenderItems(catalogItems.slice(0, renderItems.length + 6));
+      return;
     }
     setRenderItems(catalogItems);
     setIsAllDataFetched(true);
@@ -101,7 +101,10 @@ const Catalog: React.FC = () => {
             className="filterModalWindow__container__close"
             onClick={() => setIsFilterActive(false)}
           />
-          <Filter setFilterSettings={setFilterSettings} setIsFilterActive={setIsFilterActive} />
+          <Filter
+            setFilterSettings={setFilterSettings}
+            setIsFilterActive={setIsFilterActive}
+          />
         </div>
       </div>
       <div className="catalog__wrapper">
@@ -121,9 +124,7 @@ const Catalog: React.FC = () => {
           )}
           {renderItems &&
             renderItems.length > 0 &&
-            renderItems.map((item, idx) => (
-              <Item item={item} key={idx} homeIdx={idx} />
-            ))}
+            renderItems.map((item) => <Item item={item} key={item.id} />)}
         </div>
         {!isAllDataFetched && (
           <div className="catalog__wrapper__loadMore" onClick={loadMoreHandler}>

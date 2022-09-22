@@ -74,7 +74,7 @@ export const HeaderMain = styled.div`
     }
 
     button {
-      background-color: ${styleVars.fontColorWhite};
+      background-color: ${styleVars.white1};
       border: none;
       padding: 12px 24px;
       border-radius: 8px;

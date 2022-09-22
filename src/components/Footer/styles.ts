@@ -6,7 +6,7 @@ export const FooterMain = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: ${styleVars.mainBgColor};
+  background-color: ${styleVars.dark1};
   padding: 64px 0;
 
   .footer__wrapper {
@@ -45,7 +45,7 @@ export const FooterMain = styled.div`
       .footer__wrapper__siteInfo__text {
         width: 75%;
         margin: 20px 0;
-        color: ${styleVars.fontColorWhite};
+        color: ${styleVars.white1};
         font-family: ${styleVars.mainFont};
         font-size: ${styleVars.fontSizeSmall};
         font-weight: 400;
@@ -67,7 +67,7 @@ export const FooterMain = styled.div`
         display: flex;
         align-items: center;
         font-family: ${styleVars.mainFont};
-        color: ${styleVars.fontColorWhiteFade};
+        color: ${styleVars.white2};
         font-size: ${styleVars.fontSizeSmall};
         font-weight: 400;
         margin: 10px 0;
@@ -93,7 +93,7 @@ export const FooterMain = styled.div`
         align-items: center;
 
         span {
-          background-color: ${styleVars.cardBg};
+          background-color: ${styleVars.dark2};
           padding: 5px;
           border-radius: 8px;
           cursor: pointer;
@@ -115,7 +115,7 @@ export const FooterMain = styled.div`
 
   hr {
     width: 100%;
-    border: 1px solid ${styleVars.fontColorWhiteFade};
+    border: 1px solid ${styleVars.white2};
     box-sizing: border-box;
   }
 
@@ -123,7 +123,7 @@ export const FooterMain = styled.div`
     margin: 33px auto 0;
     padding: 0;
     font-family: ${styleVars.secondaryFont};
-    color: ${styleVars.fontColorWhiteFade};
+    color: ${styleVars.white2};
     font-size: ${styleVars.fontSizeExtraSmall};
     font-weight: 400;
   }

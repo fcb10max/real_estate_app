@@ -3,18 +3,17 @@ import aboutBgImg from "../../../../assets/images/png/cityImgBg.png";
 import styleVars from "../../../../styleVars";
 
 const AboutComponent = styled.div`
-  width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url(${aboutBgImg});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
   box-shadow: 0 0 50px 50px #1c1c1c inset;
+  margin: 100px 0;
 
   .about__wrapper {
     width: 90%;
-    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,7 +30,7 @@ const AboutComponent = styled.div`
       }
       p {
         font-family: ${styleVars.mainFont};
-        color: ${styleVars.fontColorWhite};
+        color: ${styleVars.white1};
         font-size: ${styleVars.fontSizeSmall};
         font-weight: 400;
         line-height: 25px;
@@ -43,8 +42,8 @@ const AboutComponent = styled.div`
         font-family: ${styleVars.mainFont};
         font-weight: 600;
         font-size: ${styleVars.fontSizeExtraSmall};
-        color: ${styleVars.fontColorDark};
-        background-color: ${styleVars.fontColorWhite};
+        color: ${styleVars.dark1};
+        background-color: ${styleVars.white1};
         padding: 12px 24px;
         border-radius: 8px;
       }
@@ -65,13 +64,13 @@ const AboutComponent = styled.div`
         }
         h3 {
           font-family: ${styleVars.mainFont};
-          color: ${styleVars.fontColorWhiteFade};
+          color: ${styleVars.white2};
           font-size: ${styleVars.fontSizeSmall};
           font-weight: 600;
         }
         p {
           font-family: ${styleVars.secondaryFont};
-          color: ${styleVars.fontColorWhiteFade};
+          color: ${styleVars.white2};
           font-size: ${styleVars.fontSizeSmall};
           font-weight: 400;
         }

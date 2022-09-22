@@ -33,6 +33,7 @@ import garden from "./assets/images/svg/gardenIcon.svg";
 import laundry from "./assets/images/svg/laundryServiceIocn.svg";
 
 export interface IObj {
+  id: number;
   homeImgs: string[];
   price: number;
   area: number;
@@ -52,6 +53,7 @@ export interface IObj {
 
 const arr: IObj[] = [
   {
+    id: 1,
     homeImgs: [
       homeImg1,
       homeImg2,
@@ -112,6 +114,7 @@ const arr: IObj[] = [
     ],
   },
   {
+    id: 2,
     homeImgs: [
       homeImg2,
       homeImg1,
@@ -172,6 +175,7 @@ const arr: IObj[] = [
     ],
   },
   {
+    id: 3,
     homeImgs: [
       homeImg3,
       homeImg1,
@@ -236,6 +240,7 @@ const arr: IObj[] = [
     ],
   },
   {
+    id: 4,
     homeImgs: [
       homeImg4,
       homeImg1,
@@ -296,6 +301,7 @@ const arr: IObj[] = [
     ],
   },
   {
+    id: 5,
     homeImgs: [
       homeImg5,
       homeImg1,
@@ -356,6 +362,7 @@ const arr: IObj[] = [
     ],
   },
   {
+    id: 6,
     homeImgs: [
       homeImg6,
       homeImg1,
@@ -416,6 +423,7 @@ const arr: IObj[] = [
     ],
   },
   {
+    id: 7,
     homeImgs: [
       homeImg7,
       homeImg1,
@@ -480,6 +488,7 @@ const arr: IObj[] = [
     ],
   },
   {
+    id: 8,
     homeImgs: [
       homeImg8,
       homeImg1,
@@ -540,6 +549,7 @@ const arr: IObj[] = [
     ],
   },
   {
+    id: 9,
     homeImgs: [
       homeImg9,
       homeImg1,
@@ -612,6 +622,7 @@ const arr: IObj[] = [
     ],
   },
   {
+    id: 10,
     homeImgs: [
       homeImg1,
       homeImg2,
@@ -672,6 +683,7 @@ const arr: IObj[] = [
     ],
   },
   {
+    id: 11,
     homeImgs: [
       homeImg2,
       homeImg1,
@@ -732,6 +744,7 @@ const arr: IObj[] = [
     ],
   },
   {
+    id: 12,
     homeImgs: [
       homeImg3,
       homeImg1,
@@ -796,6 +809,7 @@ const arr: IObj[] = [
     ],
   },
   {
+    id: 13,
     homeImgs: [
       homeImg4,
       homeImg1,
@@ -856,6 +870,7 @@ const arr: IObj[] = [
     ],
   },
   {
+    id: 14,
     homeImgs: [
       homeImg5,
       homeImg1,
@@ -916,6 +931,7 @@ const arr: IObj[] = [
     ],
   },
   {
+    id: 15,
     homeImgs: [
       homeImg6,
       homeImg1,
@@ -976,6 +992,7 @@ const arr: IObj[] = [
     ],
   },
   {
+    id: 16,
     homeImgs: [
       homeImg7,
       homeImg1,
@@ -1040,6 +1057,7 @@ const arr: IObj[] = [
     ],
   },
   {
+    id: 17,
     homeImgs: [
       homeImg8,
       homeImg1,
@@ -1100,6 +1118,7 @@ const arr: IObj[] = [
     ],
   },
   {
+    id: 18,
     homeImgs: [
       homeImg9,
       homeImg1,

@@ -16,8 +16,8 @@ const Form: React.FC = () => {
   const dropDownInputStyles: React.CSSProperties = {
     fontFamily: styleVars.mainFont,
     fontWeight: 400,
-    borderBottom: `3px solid ${styleVars.borderColor}`,
-    color: styleVars.borderColor,
+    borderBottom: `3px solid ${styleVars.white3}`,
+    color: styleVars.white3,
     fontSize: styleVars.fontSizeSmall,
   };
 

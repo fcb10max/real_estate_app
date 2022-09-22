@@ -1,8 +1,10 @@
 const styleVars = {
-  mainBgColor: `#1B1B1B`,
-  fontColorWhite: `#FFFBFB`,
-  fontColorDark: `#1B1B1B`,
-  fontColorWhiteFade: `#FFFBFBA6`,
+  dark1: `#1B1B1B`,
+  dark2: `#2C2B2B`,
+  white1: `#FFFBFB`,
+  white2: `#FFFBFBA6`,
+  white3: `#FFFBFB59`,
+  orange: `#FF9505`,
   fontSizeExtraSmall: `14px`,
   fontSizeSmall: `16px`,
   fontSizeMedium: `24px`,
@@ -12,12 +14,6 @@ const styleVars = {
   secondaryFont: `'PT Serif', serif`,
   logoFont: `'Wellfleet', cursive`,
   headerNavbarItemFont: `'Inter', sans-serif`,
-  orange: `#FF9505`,
-  borderColor: `#FFFBFB59`,
-  cardBg: `#2C2B2B`,
-  cardArrowBg: `#0000004D`,
-  cardArrowColor: `#FFFBFB`,
-  moreArrowBgColor: `#FFFBFBA6`,
 };
 
 export default styleVars;

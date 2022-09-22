@@ -5,7 +5,7 @@ import bathroomIcon from "../../../../../assets/images/svg/bathroomIcon.svg";
 import bedroomIcon from "../../../../../assets/images/svg/bedroomIcon.svg";
 
 
-const Item: React.FC<{ item: IObj; homeIdx: number }> = ({ item, homeIdx }) => {
+const Item: React.FC<{ item: IObj; }> = ({ item }) => {
   const imagesContainerRef = useRef<HTMLDivElement>(null);
 
   const handleImageArrowClick = (
@@ -48,7 +48,7 @@ const Item: React.FC<{ item: IObj; homeIdx: number }> = ({ item, homeIdx }) => {
       <div className="catalog__wrapper__items__item__info">
         <div className="catalog__wrapper__items__item__info__top">
           <p className="price">{item.price} $</p>
-          <Link to={`/home/${homeIdx}`}>View Details</Link>
+          <Link to={`/home/${item.id}`}>View Details</Link>
         </div>
         <div className="catalog__wrapper__items__item__info__bottom">
           <span>

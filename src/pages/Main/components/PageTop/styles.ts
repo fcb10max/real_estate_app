@@ -54,7 +54,7 @@ const PageTopComponent = styled.div`
       padding: 0;
       margin: 0;
       font-family: ${styleVars.mainFont};
-      color: ${styleVars.fontColorWhite};
+      color: ${styleVars.white1};
       font-size: ${styleVars.fontSizeExtraLarge};
       font-weight: 700;
 

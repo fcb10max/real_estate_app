@@ -2,15 +2,12 @@ import styled from "styled-components";
 import styleVars from "../../../../styleVars";
 
 const SliderComponent = styled.div`
-  width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 
   .slider__wrapper {
     width: 100%;
-    height: 100%;
     text-align: center;
 
     & > h2 {
@@ -25,7 +22,7 @@ const SliderComponent = styled.div`
       font-family: ${styleVars.secondaryFont};
       font-weight: 400;
       font-size: ${styleVars.fontSizeSmall};
-      color: ${styleVars.fontColorWhiteFade};
+      color: ${styleVars.white2};
       margin: 0;
     }
 
@@ -44,7 +41,7 @@ const SliderComponent = styled.div`
         top: 50%;
         transform: translate(0, -50%);
         background-color: #00000066;
-        color: ${styleVars.fontColorWhiteFade};
+        color: ${styleVars.white2};
         font-size: 50px;
         display: flex;
         justify-content: center;
@@ -61,7 +58,7 @@ const SliderComponent = styled.div`
         top: 50%;
         transform: translate(0, -50%);
         background-color: #00000066;
-        color: ${styleVars.fontColorWhiteFade};
+        color: ${styleVars.white2};
         font-size: 50px;
         display: flex;
         justify-content: center;
@@ -121,7 +118,7 @@ const SliderComponent = styled.div`
               margin: 0;
               padding: 0;
               font-family: ${styleVars.mainFont};
-              color: ${styleVars.fontColorWhite};
+              color: ${styleVars.white1};
               font-size: ${styleVars.fontSizeMedium};
               font-weight: 600;
             }
@@ -129,7 +126,7 @@ const SliderComponent = styled.div`
               margin: 0;
               padding: 0;
               font-family: ${styleVars.mainFont};
-              color: ${styleVars.fontColorWhiteFade};
+              color: ${styleVars.white2};
               font-size: ${styleVars.fontSizeExtraSmall};
               font-weight: 700;
             }
@@ -147,14 +144,14 @@ const SliderComponent = styled.div`
         div {
           width: 15px;
           height: 15px;
-          background-color: ${styleVars.fontColorWhiteFade};
+          background-color: ${styleVars.white2};
           border-radius: 50%;
           margin-right: 10px;
           cursor: pointer;
           transition: width 0.3s linear, background-color 0.3s linear;
 
           :hover {
-            background-color: ${styleVars.fontColorWhite};
+            background-color: ${styleVars.white1};
           }
 
           &.active {

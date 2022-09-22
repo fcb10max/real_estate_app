@@ -2,15 +2,12 @@ import styled from "styled-components";
 import styleVars from "../../../../styleVars";
 
 const CatalogComponent = styled.div`
-  width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 
   .catalog__wrapper {
     width: 90%;
-    height: 100%;
 
     .catalog__wrapper__sortAndFilterBlock {
       display: flex;
@@ -40,8 +37,8 @@ const CatalogComponent = styled.div`
 
           label {
             background-color: transparent;
-            color: ${styleVars.fontColorWhite};
-            border: 1.5px solid ${styleVars.fontColorWhite};
+            color: ${styleVars.white1};
+            border: 1.5px solid ${styleVars.white1};
             border-radius: 8px;
             padding: 12px 24px;
             margin-right: 20px;
@@ -50,8 +47,8 @@ const CatalogComponent = styled.div`
             cursor: pointer;
 
             :hover {
-              color: ${styleVars.fontColorWhiteFade};
-              border-color: ${styleVars.fontColorWhiteFade};
+              color: ${styleVars.white2};
+              border-color: ${styleVars.white2};
             }
           }
         }
@@ -68,19 +65,20 @@ const CatalogComponent = styled.div`
           align-items: center;
           justify-content: center;
           padding: 12px 24px;
-          background-color: ${styleVars.fontColorWhite};
+          background-color: ${styleVars.white1};
           border-radius: 8px;
+          border: none;
           transition: background-color 0.3s linear;
 
           :hover {
-            background-color: ${styleVars.fontColorWhiteFade};
+            background-color: ${styleVars.white2};
           }
 
           p {
             font-family: ${styleVars.mainFont};
             font-size: ${styleVars.fontSizeSmall};
             font-weight: 600;
-            color: ${styleVars.fontColorDark};
+            color: ${styleVars.dark1};
             margin: 0;
             margin-right: 20px;
           }
@@ -95,7 +93,7 @@ const CatalogComponent = styled.div`
       grid-gap: 16px;
 
       .catalog__wrapper__items__item {
-        background-color: ${styleVars.cardBg};
+        background-color: ${styleVars.dark2};
         display: flex;
         flex-direction: column;
         overflow: hidden;
@@ -113,7 +111,7 @@ const CatalogComponent = styled.div`
             top: 0;
             width: 30px;
             height: 100%;
-            color: ${styleVars.fontColorWhite};
+            color: ${styleVars.white1};
             font-size: ${styleVars.fontSizeMedium};
             background-color: #000000dd;
             cursor: pointer;
@@ -168,7 +166,7 @@ const CatalogComponent = styled.div`
 
             p {
               font-family: ${styleVars.mainFont};
-              color: ${styleVars.fontColorWhite};
+              color: ${styleVars.white1};
               font-weight: 600;
               font-size: ${styleVars.fontSizeMedium};
             }
@@ -176,16 +174,16 @@ const CatalogComponent = styled.div`
             a {
               text-decoration: none;
               font-family: ${styleVars.mainFont};
-              color: ${styleVars.fontColorDark};
+              color: ${styleVars.dark1};
               font-weight: 600;
               font-size: ${styleVars.fontSizeExtraSmall};
               padding: 12px 24px;
-              background-color: ${styleVars.fontColorWhite};
+              background-color: ${styleVars.white1};
               border-radius: 8px;
               transition: background-color 0.3s linear;
 
               :hover {
-                background-color: ${styleVars.fontColorWhiteFade};
+                background-color: ${styleVars.white2};
               }
             }
           }
@@ -211,7 +209,7 @@ const CatalogComponent = styled.div`
               }
               p {
                 font-family: ${styleVars.mainFont};
-                color: ${styleVars.fontColorWhiteFade};
+                color: ${styleVars.white2};
                 font-weight: 600;
                 font-size: ${styleVars.fontSizeExtraSmall};
               }
@@ -239,7 +237,7 @@ const CatalogComponent = styled.div`
         font-family: ${styleVars.mainFont};
         font-weight: 500;
         font-size: ${styleVars.fontSizeExtraSmall};
-        color: ${styleVars.fontColorWhite};
+        color: ${styleVars.white1};
       }
     }
   }
@@ -273,7 +271,7 @@ const CatalogComponent = styled.div`
         font-family: ${styleVars.mainFont};
         font-size: ${styleVars.fontSizeSmall};
         font-weight: 600;
-        color: ${styleVars.fontColorDark};
+        color: ${styleVars.dark1};
       }
 
       .filterModalWindow__container__close {
@@ -320,14 +318,14 @@ const CatalogComponent = styled.div`
           input + label {
             padding: 12px 24px;
             margin: 0 10px 10px 0;
-            border: 2px solid ${styleVars.fontColorDark};
+            border: 2px solid ${styleVars.dark1};
             border-radius: 8px;
             transition: border-color 0.3s linear;
             cursor: pointer;
             font-family: ${styleVars.mainFont};
             font-size: ${styleVars.fontSizeExtraSmall};
             font-weight: 600;
-            color: ${styleVars.fontColorDark};
+            color: ${styleVars.dark1};
           }
 
           input:checked + label {
@@ -338,19 +336,19 @@ const CatalogComponent = styled.div`
 
       button {
         padding: 12px 24px;
-        background-color: ${styleVars.fontColorDark};
+        background-color: ${styleVars.dark1};
         border: none;
         border-radius: 8px;
         font-family: ${styleVars.mainFont};
         font-size: ${styleVars.fontSizeExtraSmall};
         font-weight: 600;
-        color: ${styleVars.fontColorWhite};
+        color: ${styleVars.white1};
         margin: 20px;
         cursor: pointer;
         transition: color 0.3s linear;
 
         :hover {
-          color: ${styleVars.fontColorWhiteFade};
+          color: ${styleVars.white2};
         }
       }
     }

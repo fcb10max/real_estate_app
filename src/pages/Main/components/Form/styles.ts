@@ -3,9 +3,7 @@ import styleVars from "../../../../styleVars";
 import homeIcon from "../../../../assets/images/svg/houseIcon.svg";
 
 const FormComponent = styled.div`
-  width: 100%;
-  height: 100vh;
-  background-color: ${styleVars.cardBg};
+  background-color: ${styleVars.dark2};
   position: relative;
   background-image: url(${homeIcon});
   background-size: 50% 80%;
@@ -29,22 +27,24 @@ const FormComponent = styled.div`
 
   .form__wrapper {
     width: 80%;
-    height: 100%;
+    min-height: 600px;
+
     margin: 0 auto;
     display: flex;
-    flex-direction: space-between;
 
     .form__wrapper__left {
-      width: 60%;
+      flex: 2;
       display: flex;
       flex-direction: column;
       justify-content: center;
+
 
       h1 {
         font-family: ${styleVars.mainFont};
         font-size: ${styleVars.fontSizeExtraLarge};
         font-weight: 700;
-        color: ${styleVars.fontColorWhite};
+        color: ${styleVars.white1};
+        margin: 0;
 
         span {
           color: ${styleVars.orange};
@@ -52,15 +52,17 @@ const FormComponent = styled.div`
       }
 
       p {
-        width: 90%;
+        width: 75%;
         font-family: ${styleVars.mainFont};
         font-size: ${styleVars.fontSizeLarge};
-        color: ${styleVars.fontColorWhiteFade};
+        color: ${styleVars.white2};
         font-weight: 400;
         line-height: 45px;
+        margin: 20px 0;
       }
     }
     .from__wrapper__right {
+      flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -75,15 +77,15 @@ const FormComponent = styled.div`
           width: 47%;
           background-color: transparent;
           border: none;
-          border-bottom: 3px solid ${styleVars.borderColor};
-          color: ${styleVars.fontColorWhiteFade};
+          border-bottom: 3px solid ${styleVars.white3};
+          color: ${styleVars.white2};
           font-family: ${styleVars.mainFont};
           font-size: ${styleVars.fontSizeSmall};
           font-weight: 400;
 
           ::placeholder {
             /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: ${styleVars.borderColor};
+            color: ${styleVars.white3};
             font-family: ${styleVars.mainFont};
             font-size: ${styleVars.fontSizeSmall};
             font-weight: 400;
@@ -92,7 +94,7 @@ const FormComponent = styled.div`
 
           :-ms-input-placeholder {
             /* Internet Explorer 10-11 */
-            color: ${styleVars.borderColor};
+            color: ${styleVars.white3};
             font-family: ${styleVars.mainFont};
             font-size: ${styleVars.fontSizeSmall};
             font-weight: 400;
@@ -100,7 +102,7 @@ const FormComponent = styled.div`
 
           ::-ms-input-placeholder {
             /* Microsoft Edge */
-            color: ${styleVars.borderColor};
+            color: ${styleVars.white3};
             font-family: ${styleVars.mainFont};
             font-size: ${styleVars.fontSizeSmall};
             font-weight: 400;
@@ -119,15 +121,15 @@ const FormComponent = styled.div`
         height: 30px;
         background-color: transparent;
         border: none;
-        border-bottom: 3px solid ${styleVars.borderColor};
-        color: ${styleVars.fontColorWhiteFade};
+        border-bottom: 3px solid ${styleVars.white3};
+        color: ${styleVars.white2};
         font-family: ${styleVars.mainFont};
         font-size: ${styleVars.fontSizeSmall};
         font-weight: 400;
 
         ::placeholder {
           /* Chrome, Firefox, Opera, Safari 10.1+ */
-          color: ${styleVars.borderColor};
+          color: ${styleVars.white3};
           font-family: ${styleVars.mainFont};
           font-size: ${styleVars.fontSizeSmall};
           font-weight: 400;
@@ -136,7 +138,7 @@ const FormComponent = styled.div`
 
         :-ms-input-placeholder {
           /* Internet Explorer 10-11 */
-          color: ${styleVars.borderColor};
+          color: ${styleVars.white3};
           font-family: ${styleVars.mainFont};
           font-size: ${styleVars.fontSizeSmall};
           font-weight: 400;
@@ -144,7 +146,7 @@ const FormComponent = styled.div`
 
         ::-ms-input-placeholder {
           /* Microsoft Edge */
-          color: ${styleVars.borderColor};
+          color: ${styleVars.white3};
           font-family: ${styleVars.mainFont};
           font-size: ${styleVars.fontSizeSmall};
           font-weight: 400;

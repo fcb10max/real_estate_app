@@ -13,7 +13,9 @@ const Main: React.FC = () => {
     <MainPage>
       <PageTop />
       <Catalog />
-      <Map />
+      <div className="map">
+        <Map />
+      </div>
       <About />
       <Slider arr={sliderArr} />
       <Form />

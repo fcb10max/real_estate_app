@@ -7,7 +7,7 @@ const MapComponent = styled.div`
   justify-content: center;
 
   .mapComponent__wrapper {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 
@@ -21,7 +21,7 @@ const MapComponent = styled.div`
 
     p {
       font-family: ${styleVars.secondaryFont};
-      color: ${styleVars.fontColorWhiteFade};
+      color: ${styleVars.white2};
       font-size: ${styleVars.fontSizeSmall};
       font-weight: 400;
       margin: 10px 0 40px;
