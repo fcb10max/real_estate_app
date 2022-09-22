@@ -30,7 +30,6 @@ const MapComponent = styled.div`
     .mapComponent__wrapper__map {
       width: 100%;
       height: 600px;
-      background: teal;
     }
   }
 `;
