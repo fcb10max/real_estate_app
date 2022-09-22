@@ -64,7 +64,7 @@ export const HeaderMain = styled.div`
       }
     }
 
-    div {
+    .header__wrapper__navbar_projects-block {
       color: #fffbfb;
 
       ::after {

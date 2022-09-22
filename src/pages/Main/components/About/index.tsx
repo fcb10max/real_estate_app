@@ -1,8 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import AboutComponent from "./styles";
 
 const About: React.FC = () => {
+  const location = useLocation();
+
   return (
     <AboutComponent>
       <div className="about__wrapper">
@@ -15,7 +17,7 @@ const About: React.FC = () => {
             easy access to freeways, buses and trolleys. . Laundry is available
             on premises.
           </p>
-          <Link to="/about">Read More</Link>
+          {location.pathname !== "/about" && <Link to="/about">Read More</Link>}
         </div>
         <div className="about__wrapper__right">
           <div className="about__wrapper__right__item">

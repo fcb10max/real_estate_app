@@ -1,8 +1,9 @@
 import React from 'react'
+import About from '../Main/components/About'
 
 const AboutPage: React.FC = () => {
   return (
-    <div>AboutPage</div>
+    <div><About/></div>
   )
 }
 

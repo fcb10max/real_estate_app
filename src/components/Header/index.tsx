@@ -2,6 +2,7 @@ import React from "react";
 import { HeaderMain } from "./styles";
 import logo from "../../assets/images/svg/logo.svg";
 import { Link, NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Header: React.FC = () => {
   return (
@@ -16,7 +17,7 @@ const Header: React.FC = () => {
         <div className="header__wrapper__navbar">
           <NavLink className={(el)=>el.isActive ? "active" : ""} to="/">Home</NavLink>
           <NavLink className={(el)=>el.isActive ? "active" : ""} to="/about">About</NavLink>
-          <div className="header__wrapper__navbar_projects-block">Other Projects</div>
+          <HashLink smooth to="/#projects" className="header__wrapper__navbar_projects-block">Other Projects</HashLink>
           <button>Enquire Now</button>
         </div>
       </div>

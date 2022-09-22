@@ -60,7 +60,7 @@ const Slider: React.FC<IProps> = ({ arr }) => {
   }, [currentSliderElIdx, isInitialRender]);
 
   return (
-    <SliderComponent>
+    <SliderComponent id="projects">
       <div className="slider__wrapper">
         <h2>Other Projects</h2>
         <p>Other projects by us in different locations </p>
