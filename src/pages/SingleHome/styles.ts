@@ -2,13 +2,15 @@ import styled from "styled-components";
 import styleVars from "../../styleVars";
 
 export const SingleHomeComponent = styled.div`
-  width: 90%;
-  margin: 0 auto;
-
+  width: 100%;
+  
   .singleHome__sliderContainer {
   }
 
   .singleHome__info {
+    width: 90%;
+    margin: 0 auto;
+
     .singleHome__info__priceAndShareBlock {
       display: flex;
       justify-content: space-between;
@@ -130,6 +132,7 @@ export const SingleHomeComponent = styled.div`
 
   }
   .singleHome__map {
-    margin: 40px 0;
+    width: 90%;
+    margin: 40px auto;
   }
 `;

@@ -5,8 +5,8 @@ import { SingleHomeComponent } from "./styles";
 import shareIcon from "../../assets/images/svg/shareIcon.svg";
 import bedroomIcon from "../../assets/images/svg/bedroomIcon.svg";
 import bathroomIcon from "../../assets/images/svg/bathroomIcon.svg";
-import Item from "../Main/components/Catalog/subcomponents/Item";
 import Map from "../Main/components/Map";
+import MasonrySlider from "./components/MasonrySlider";
 
 const SingleHome: React.FC = () => {
   const { id } = useParams();
@@ -18,7 +18,9 @@ const SingleHome: React.FC = () => {
     <SingleHomeComponent>
       {data ? (
         <>
-          <div className="singleHome__sliderContainer">{/* TODO */}</div>
+          <div className="singleHome__sliderContainer">
+            <MasonrySlider imgArr={data.roomImgs} />
+          </div>
           <div className="singleHome__info">
             <div className="singleHome__info__priceAndShareBlock">
               <p>{data.price} $</p>

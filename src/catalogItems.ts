@@ -92,7 +92,156 @@ const arr: IObj[] = [
         l: roomImg5L,
         s: roomImg5S,
       },
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
 
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
       {
         l: roomImg6L,
         s: roomImg6S,
@@ -153,7 +302,78 @@ const arr: IObj[] = [
         l: roomImg5L,
         s: roomImg5S,
       },
-
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
       {
         l: roomImg6L,
         s: roomImg6S,
@@ -194,6 +414,56 @@ const arr: IObj[] = [
       bathrooms: 1,
     },
     roomImgs: [
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
       {
         l: roomImg1L,
         s: roomImg1S,
@@ -284,6 +554,31 @@ const arr: IObj[] = [
         l: roomImg6L,
         s: roomImg6S,
       },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
     ],
     features: [
       {
@@ -320,6 +615,106 @@ const arr: IObj[] = [
       bathrooms: 1,
     },
     roomImgs: [
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
       {
         l: roomImg1L,
         s: roomImg1S,
@@ -406,6 +801,81 @@ const arr: IObj[] = [
         l: roomImg6L,
         s: roomImg6S,
       },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
     ],
     features: [
       {
@@ -442,6 +912,131 @@ const arr: IObj[] = [
       bathrooms: 1,
     },
     roomImgs: [
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
       {
         l: roomImg1L,
         s: roomImg1S,
@@ -532,6 +1127,106 @@ const arr: IObj[] = [
         l: roomImg6L,
         s: roomImg6S,
       },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
     ],
     features: [
       {
@@ -568,6 +1263,156 @@ const arr: IObj[] = [
       bathrooms: 1,
     },
     roomImgs: [
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
       {
         l: roomImg1L,
         s: roomImg1S,
@@ -666,6 +1511,81 @@ const arr: IObj[] = [
         l: roomImg6L,
         s: roomImg6S,
       },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
     ],
     features: [
       {
@@ -727,6 +1647,56 @@ const arr: IObj[] = [
         l: roomImg6L,
         s: roomImg6S,
       },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
     ],
     features: [
       {
@@ -763,6 +1733,31 @@ const arr: IObj[] = [
       bathrooms: 1,
     },
     roomImgs: [
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
       {
         l: roomImg1L,
         s: roomImg1S,
@@ -853,6 +1848,106 @@ const arr: IObj[] = [
         l: roomImg6L,
         s: roomImg6S,
       },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
     ],
     features: [
       {
@@ -889,6 +1984,131 @@ const arr: IObj[] = [
       bathrooms: 1,
     },
     roomImgs: [
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
       {
         l: roomImg1L,
         s: roomImg1S,
@@ -975,6 +2195,56 @@ const arr: IObj[] = [
         l: roomImg6L,
         s: roomImg6S,
       },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
     ],
     features: [
       {
@@ -1011,6 +2281,106 @@ const arr: IObj[] = [
       bathrooms: 1,
     },
     roomImgs: [
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
       {
         l: roomImg1L,
         s: roomImg1S,
@@ -1101,6 +2471,31 @@ const arr: IObj[] = [
         l: roomImg6L,
         s: roomImg6S,
       },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
     ],
     features: [
       {
@@ -1137,6 +2532,56 @@ const arr: IObj[] = [
       bathrooms: 1,
     },
     roomImgs: [
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
+      {
+        l: roomImg1L,
+        s: roomImg1S,
+      },
+      {
+        l: roomImg2L,
+        s: roomImg2S,
+      },
+      {
+        l: roomImg3L,
+        s: roomImg3S,
+      },
+      {
+        l: roomImg4L,
+        s: roomImg4S,
+      },
+      {
+        l: roomImg5L,
+        s: roomImg5S,
+      },
+
+      {
+        l: roomImg6L,
+        s: roomImg6S,
+      },
       {
         l: roomImg1L,
         s: roomImg1S,
