@@ -1,31 +1,69 @@
 import styled from "styled-components";
 import styleVars from "../../../../styleVars";
-import zoomIn from "../../../../assets/images/svg/zoom-in.svg"
+import zoomIn from "../../../../assets/images/svg/zoom-in.svg";
 
 const Main = styled.div`
-  .bigImgModalWindow {
-    display: none;
+  position: relative;
+  .largeImgModalWindow {
     position: fixed;
     left: 0;
     top: 0;
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #000000dd;
     z-index: 10;
+    overflow: auto;
+
+    span.zoomIn {
+      right: 100px;
+      top: 15px;
+    }
+    span.zoomOut {
+      right: 150px;
+      top: 15px;
+    }
 
     span {
-      position: absolute;
-      right: 20px;
-      top: 20px;
-      width: 20px;
-      height: 20px;
-      background-color: #fff;
+      position: fixed;
+      right: 50px;
+      top: 30px;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      z-index: 2;
+
+      &.close::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 40px;
+        height: 3px;
+        background-color: #fff;
+        transform: rotate(45deg);
+      }
+      &.close::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 40px;
+        height: 3px;
+        background-color: #fff;
+        transform: rotate(-45deg);
+      }
     }
 
     img {
       height: 90%;
-      width: 90%;
+      width: 80%;
       object-fit: contain;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
     }
 
     &.active {
@@ -48,6 +86,7 @@ const Main = styled.div`
       align-items: center;
       font-size: ${styleVars.fontSizeLarge};
       cursor: pointer;
+      z-index: 5;
     }
 
     span:nth-of-type(1) {
@@ -78,206 +117,218 @@ const Main = styled.div`
         padding: 5px;
         scroll-snap-align: start;
 
-        img {
+        div {
           height: 100%;
           width: 100%;
-          object-fit: cover;
           background-color: #fff;
           padding: 5px;
           border-radius: 8px;
           position: relative;
-          
+
           ::before {
-            content: url(${zoomIn});
-            opacity: 1;
             position: absolute;
-            width: 100px;
-            height: 100px;
+            content: "";
             left: 0;
             top: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(${zoomIn});
+            display: inline-block;
+            background-size: 50px 50px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #00000055;
+            opacity: 0;
             transition: opacity 0.3s linear;
+            cursor: pointer;
           }
 
-          &:hover::before {
+          :hover::before {
             opacity: 1;
+          }
+
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
           }
         }
 
         &:nth-child(n + 1) {
-          img:nth-child(1) {
+          div:nth-child(1) {
             grid-column: 1 / span 4;
             grid-row: 1 / span 2;
           }
-          img:nth-child(2) {
+          div:nth-child(2) {
             grid-column: 1 / span 2;
             grid-row: 3 / span 2;
           }
-          img:nth-child(3) {
+          div:nth-child(3) {
             grid-column: 3 / span 2;
             grid-row: 3 / span 2;
           }
         }
 
         &:nth-child(2n) {
-          img:nth-child(1) {
+          div:nth-child(1) {
             grid-column: 1 / span 2;
             grid-row: 1 / span 4;
           }
-          img:nth-child(2) {
+          div:nth-child(2) {
             grid-column: 3 / span 2;
             grid-row: 1 / span 3;
           }
-          img:nth-child(3) {
+          div:nth-child(3) {
             grid-column: 3 / span 2;
             grid-row: 4 / span 1;
           }
         }
 
         &:nth-child(3n) {
-          img:nth-child(1) {
+          div:nth-child(1) {
             grid-column: 1 / span 3;
             grid-row: 1 / span 2;
           }
-          img:nth-child(2) {
+          div:nth-child(2) {
             grid-column: 4 / span 1;
             grid-row: 1 / span 2;
           }
-          img:nth-child(3) {
+          div:nth-child(3) {
             grid-column: 1 / span 4;
             grid-row: 3 / span 2;
           }
         }
 
         &:nth-child(4n) {
-          img:nth-child(1) {
+          div:nth-child(1) {
             grid-column: 1 / span 2;
             grid-row: 2 / span 3;
           }
-          img:nth-child(2) {
+          div:nth-child(2) {
             grid-column: 3 / span 2;
             grid-row: 1 / span 4;
           }
-          img:nth-child(3) {
+          div:nth-child(3) {
             grid-column: 1 / span 2;
             grid-row: 1 / span 1;
           }
         }
 
         &:nth-child(5n) {
-          img:nth-child(1) {
+          div:nth-child(1) {
             grid-column: 1 / span 2;
             grid-row: 1 / span 2;
           }
-          img:nth-child(2) {
+          div:nth-child(2) {
             grid-column: 3 / span 2;
             grid-row: 1 / span 2;
           }
-          img:nth-child(3) {
+          div:nth-child(3) {
             grid-column: 1 / span 4;
             grid-row: 3 / span 2;
           }
         }
 
         &:nth-child(6n) {
-          img:nth-child(1) {
+          div:nth-child(1) {
             grid-column: 1 / span 2;
             grid-row: 1 / span 4;
           }
-          img:nth-child(2) {
+          div:nth-child(2) {
             grid-column: 3 / span 2;
             grid-row: 1 / span 2;
           }
-          img:nth-child(3) {
+          div:nth-child(3) {
             grid-column: 3 / span 2;
             grid-row: 3 / span 2;
           }
         }
 
         &:nth-child(7n) {
-          img:nth-child(1) {
+          div:nth-child(1) {
             grid-column: 1 / span 3;
             grid-row: 1 / span 2;
           }
-          img:nth-child(2) {
+          div:nth-child(2) {
             grid-column: 4 / span 1;
             grid-row: 1 / span 4;
           }
-          img:nth-child(3) {
+          div:nth-child(3) {
             grid-column: 1 / span 3;
             grid-row: 3 / span 2;
           }
         }
 
         &:nth-child(8n) {
-          img:nth-child(1) {
+          div:nth-child(1) {
             grid-column: 1 / span 4;
             grid-row: 1 / span 2;
           }
-          img:nth-child(2) {
+          div:nth-child(2) {
             grid-column: 1 / span 1;
             grid-row: 3 / span 4;
           }
-          img:nth-child(3) {
+          div:nth-child(3) {
             grid-column: 2 / span 3;
             grid-row: 3 / span 4;
           }
         }
 
         &:nth-child(9n) {
-          img:nth-child(1) {
+          div:nth-child(1) {
             grid-column: 1 / span 1;
             grid-row: 1 / span 2;
           }
-          img:nth-child(2) {
+          div:nth-child(2) {
             grid-column: 1 / span 1;
             grid-row: 3 / span 2;
           }
-          img:nth-child(3) {
+          div:nth-child(3) {
             grid-column: 2 / span 3;
             grid-row: 1 / span 4;
           }
         }
 
         /* &:nth-child(10n) {
-          img:nth-child(1) {
+          div:nth-child(1) {
             grid-column: 1 / span 4;
             grid-row: 1 / span 3;
           }
-          img:nth-child(2) {
+          div:nth-child(2) {
             grid-column: 1 / span 2;
             grid-row: 4 / span 1;
           }
-          img:nth-child(3) {
+          div:nth-child(3) {
             grid-column: 3 / span 2;
             grid-row: 4 / span 1;
           }
         } */
 
         &:nth-child(11n) {
-          img:nth-child(1) {
+          div:nth-child(1) {
             grid-column: 1 / span 1;
             grid-row: 1 / span 1;
           }
-          img:nth-child(2) {
+          div:nth-child(2) {
             grid-column: 1 / span 1;
             grid-row: 2 / span 3;
           }
-          img:nth-child(3) {
+          div:nth-child(3) {
             grid-column: 2 / span 3;
             grid-row: 1 / span 4;
           }
         }
 
         &:nth-child(12n) {
-          img:nth-child(1) {
+          div:nth-child(1) {
             grid-column: 1 / span 3;
             grid-row: 1 / span 4;
           }
-          img:nth-child(2) {
+          div:nth-child(2) {
             grid-column: 4 / span 1;
             grid-row: 1 / span 3;
           }
-          img:nth-child(3) {
+          div:nth-child(3) {
             grid-column: 4 / span 1;
             grid-row: 4 / span 1;
           }

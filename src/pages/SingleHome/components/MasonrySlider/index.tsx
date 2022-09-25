@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Main from "./styles";
+import zoomIn from "../../../../assets/images/svg/zoom-in.svg";
+import zoomOut from "../../../../assets/images/svg/zoom-out.svg";
 
 interface IProps {
   imgArr: {
@@ -10,9 +12,12 @@ interface IProps {
 
 const MasonrySlider: React.FC<IProps> = ({ imgArr }) => {
   const ref = useRef<HTMLDivElement>(null);
+  const imgRef = useRef<HTMLImageElement>(null);
   const [activeCardIdx, setActiveCardIdx] = useState(0);
   const [largeImg, setLargeImg] = useState<string>("");
-  const [isImgFullScreenViewActive, setIsImgFullScreenViewActive] = useState(false);
+  const [isImgFullScreenViewActive, setIsImgFullScreenViewActive] =
+    useState(false);
+  const [zoomValue, setZoomValue] = useState(1);
 
   // Divide imgArr into chunks of arrays that contain 3 imgArr elements in them
   const chunkedImgArr: Array<IProps["imgArr"]> = imgArr.reduce(
@@ -50,12 +55,49 @@ const MasonrySlider: React.FC<IProps> = ({ imgArr }) => {
     });
   }, [activeCardIdx]);
 
+  const showLargeImage = (imgUrl: string) => {
+    setLargeImg(imgUrl);
+    setIsImgFullScreenViewActive(true);
+  };
+
+  const zoomInHandler = () => {
+    if (zoomValue >= 2) return;
+    setZoomValue(zoomValue + 0.1);
+  };
+
+  const zoomOutHandler = () => {
+    setZoomValue(zoomValue - 0.1);
+  };
+
+  useEffect(() => {
+    if (!imgRef.current) return;
+    imgRef.current.style.transform = `scale(${zoomValue})`;
+  }, [zoomValue]);
+
   return (
     <Main>
-      <div className="bigImgModalWindow">
-        <span />
-        <img src={largeImg} alt="room" />
-      </div>
+      {isImgFullScreenViewActive && (
+        <div className="largeImgModalWindow">
+          <span
+            className="close"
+            onClick={() => {
+              setIsImgFullScreenViewActive(false);
+              setZoomValue(1);
+            }}
+          />
+          {zoomValue < 2 && (
+            <span onClick={zoomInHandler} className="zoomIn">
+              <img src={zoomIn} alt="zoom in" />
+            </span>
+          )}{" "}
+          {zoomValue > 1 && (
+            <span onClick={zoomOutHandler} className="zoomOut">
+              <img src={zoomOut} alt="zoom out" />
+            </span>
+          )}
+          <img src={largeImg} alt="room" ref={imgRef} />
+        </div>
+      )}
       <div className="masonrySlider__wrapper">
         <span onClick={switchCard}>{"<"}</span>
         <span onClick={switchCard}>{">"}</span>
@@ -67,7 +109,9 @@ const MasonrySlider: React.FC<IProps> = ({ imgArr }) => {
                 key={idx1}
               >
                 {chunk.map((imgURL, idx2) => (
-                  <img src={imgURL.s} key={idx2} alt="room" />
+                  <div key={idx2} onClick={(e) => showLargeImage(imgURL.l)}>
+                    <img src={imgURL.s} alt="room" />
+                  </div>
                 ))}
               </div>
             ))}
